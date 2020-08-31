@@ -3,11 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		2EB972E024FD7A7E00BBC208 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB972DF24FD7A7E00BBC208 /* main.swift */; };
+		2EB972EB24FD7B4300BBC208 /* Numerics in Frameworks */ = {isa = PBXBuildFile; productRef = 2EB972EA24FD7B4300BBC208 /* Numerics */; };
+		2EB972ED24FD7B7C00BBC208 /* Stride.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB972EC24FD7B7C00BBC208 /* Stride.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +26,9 @@
 
 /* Begin PBXFileReference section */
 		2EB972DC24FD7A7E00BBC208 /* minimum-mandelplot */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "minimum-mandelplot"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2EB972DF24FD7A7E00BBC208 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		2EB972DF24FD7A7E00BBC208 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; usesTabs = 1; };
+		2EB972EC24FD7B7C00BBC208 /* Stride.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stride.swift; sourceTree = "<group>"; };
+		2EB972EE24FD7F3900BBC208 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EB972EB24FD7B4300BBC208 /* Numerics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +48,7 @@
 			children = (
 				2EB972DE24FD7A7E00BBC208 /* minimum-mandelplot */,
 				2EB972DD24FD7A7E00BBC208 /* Products */,
+				2EB972E924FD7B4300BBC208 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,8 +64,17 @@
 			isa = PBXGroup;
 			children = (
 				2EB972DF24FD7A7E00BBC208 /* main.swift */,
+				2EB972EC24FD7B7C00BBC208 /* Stride.swift */,
+				2EB972EE24FD7F3900BBC208 /* README.md */,
 			);
 			path = "minimum-mandelplot";
+			sourceTree = "<group>";
+		};
+		2EB972E924FD7B4300BBC208 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -78,6 +93,9 @@
 			dependencies = (
 			);
 			name = "minimum-mandelplot";
+			packageProductDependencies = (
+				2EB972EA24FD7B4300BBC208 /* Numerics */,
+			);
 			productName = "minimum-mandelplot";
 			productReference = 2EB972DC24FD7A7E00BBC208 /* minimum-mandelplot */;
 			productType = "com.apple.product-type.tool";
@@ -106,6 +124,9 @@
 				Base,
 			);
 			mainGroup = 2EB972D324FD7A7E00BBC208;
+			packageReferences = (
+				2EB972E624FD7AD000BBC208 /* XCRemoteSwiftPackageReference "swift-numerics" */,
+			);
 			productRefGroup = 2EB972DD24FD7A7E00BBC208 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -120,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EB972ED24FD7B7C00BBC208 /* Stride.swift in Sources */,
 				2EB972E024FD7A7E00BBC208 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,6 +306,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2EB972E624FD7AD000BBC208 /* XCRemoteSwiftPackageReference "swift-numerics" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:apple/swift-numerics.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.6;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2EB972EA24FD7B4300BBC208 /* Numerics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2EB972E624FD7AD000BBC208 /* XCRemoteSwiftPackageReference "swift-numerics" */;
+			productName = Numerics;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2EB972D424FD7A7E00BBC208 /* Project object */;
 }
